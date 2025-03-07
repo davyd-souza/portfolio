@@ -1,0 +1,22 @@
+---
+import { Icon } from 'astro-icon/components'
+
+type Props = {
+	href: string
+	title?: string
+	name: string
+}
+
+const { href, title, name } = Astro.props
+---
+
+<a
+	href={href}
+	title={title}
+	target="_blank"
+	class="flex items-center gap-2 text-foreground"
+>
+	{name}
+
+	<Icon name="arrow-up-right" class="size-5" />
+</a>

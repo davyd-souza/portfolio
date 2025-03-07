@@ -1,8 +1,167 @@
 ---
-import BaseLayout from "@/layouts/base-layout.astro"
-import "@/styles/global.css"
+import BaseLayout from '@/layouts/base-layout.astro'
+import SocialLink from '@/components/social-link.astro'
+
+import '@/styles/global.css'
+
+import { Icon } from 'astro-icon/components'
 ---
 
 <BaseLayout title="Home">
-	<h1>Davyd Souza</h1>
+	<main class="mx-auto max-w-3xl space-y-16 px-2 py-20 sm:px-4 lg:px-0">
+		<header>
+			<h1 class="font-display text-2xl font-bold">Davyd Souza</h1>
+
+			<p class="font-sm text-muted-foreground">Front-end Engineer</p>
+		</header>
+
+		<section style="--stagger: 1" class="space-y-2">
+			<h2 class="text-lg font-semibold">Now</h2>
+
+			<div class="space-y-4">
+				<p>
+					Working as a front-end engineer at
+					<a
+						href="https://tempoenergia.com.br/"
+						target="_blank"
+						class="font-semibold"
+					>
+						Tempo Energia
+					</a>
+				</p>
+
+				<p class="leading-6">
+					I love combining the worlds of logic and creativity to make
+					eye-catching, acessible, and user-friendly web applications.
+				</p>
+			</div>
+		</section>
+
+		<section class="space-y-2">
+			<h2 class="text-lg font-semibold">Work</h2>
+
+			<div class="space-y-8">
+				<article class="space-y-2">
+					<header class="flex justify-between gap-2">
+						<h3>
+							Front-end Engineer at <span
+								class="font-semibold italic">Tempo Energia</span
+							>
+						</h3>
+
+						<div class="text-sm text-muted-foreground">
+							<time datetime="2022-10">Oct 2022</time>
+							<span>-</span>
+							<p class="inline">Present</p>
+						</div>
+					</header>
+
+					<div class="grid grid-cols-[3px_1fr] gap-4">
+						<span aria-hidden="true" class="h-full bg-muted"></span>
+
+						<ul class="space-y-3 text-sm/6 text-muted-foreground">
+							<li>
+								Develop a design system from scratch,
+								simplifying and making page development faster
+								due to componentization both on Figma and React.
+							</li>
+
+							<li>
+								Lead front-end development of a dashboard using
+								React, TypeScript and other libraries from the
+								ecosystem, implementing interactive and
+								responsive pages enabling management of 200+
+								internal clients.
+							</li>
+
+							<li>
+								Organized workshops on React, TypeScript and
+								CSS, increasing the team's proficiency and
+								accelerating the adoption of modern development
+								pratices.
+							</li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="space-y-2">
+					<header class="flex justify-between gap-2">
+						<h3>
+							Application Developer at <span
+								class="font-semibold italic">IBM Brazil</span
+							>
+						</h3>
+
+						<div class="text-sm text-muted-foreground">
+							<time datetime="2019-10">Oct 2019</time>
+							<span>-</span>
+							<time datetime="2021-10">Oct 2021</time>
+						</div>
+					</header>
+
+					<div class="grid grid-cols-[3px_1fr] gap-4">
+						<span aria-hidden="true" class="h-full bg-muted"></span>
+
+						<ul class="space-y-3 text-sm/6 text-muted-foreground">
+							<li>
+								Develop and maintained a Node.JS application
+								using MongoDB, deployed in Docker, responsible
+								for data retrieval and reports. The process,
+								which took 6 hours, was optimized to just 2
+								minutes, resulting in a time reduction of 99%.
+							</li>
+
+							<li>
+								Migrated a web application from AngularJS to
+								Angular 8, implementing a new front-end
+								architecture and design, creating a more modular
+								and reusable components, resulting in
+								approximately 25% decrease in page's load time
+								and an enhanced user experience.
+							</li>
+
+							<li>
+								Built automation scripts using Ansible and
+								Python. Improving operation team efficiency by
+								30%, and reducing work time needed on secondary
+								tasks by 40%.
+							</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="space-y-2">
+			<h2 class="text-lg font-semibold">Contact me</h2>
+
+			<ul class="grid grid-cols-[repeat(auto-fill,_10rem)] gap-2">
+				<li>
+					<SocialLink
+						name="Email"
+						href="mailto:davyd.eduardo.souza@hotmail.com"
+						title="davyd.eduardo.souza@hotmail.com"
+					/>
+				</li>
+
+				<li>
+					<SocialLink name="X" href="https://www.x.com/odeisouza" />
+				</li>
+
+				<li>
+					<SocialLink
+						name="Bluesky"
+						href="https://bsky.app/profile/odeisouza.bsky.social"
+					/>
+				</li>
+
+				<li>
+					<SocialLink
+						name="LinkedIn"
+						href="https://www.linkedin.com/in/davyd-souza"
+					/>
+				</li>
+			</ul>
+		</section>
+	</main>
 </BaseLayout>
