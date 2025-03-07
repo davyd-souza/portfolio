@@ -8,8 +8,36 @@
   font-display: swap;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: hsl(180 5% 96%);
+  --foreground: hsl(0 0% 15%);
+
+  --muted: hsl(210 1% 68%);
+  --muted-foreground: hsl(180 1% 18%);
+}
+
+.dark {
+  --background: hsl(0 0% 15%);
+  --foreground: hsl(180 5% 96%);
+
+  --muted: hsl(180 1% 18%);
+  --muted-foreground: hsl(210 1% 68%);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted-foreground) transparent;
+}
 
 @theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
   --font-sans: sans-serif;
   --font-display: "Besley", serif;
 }
